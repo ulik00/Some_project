@@ -1,0 +1,232 @@
+@media screen and (max-width:414px) {
+
+    body {
+        width: 1000px;
+    }
+
+    .header_top_block {
+        display: flex;
+        /* align-items: center; */
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transition: .3s;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .question {
+        height: 150px;
+        width: 1000px;
+        /* width:; */
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .question_card {
+        width: 600px;
+        height: 100px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    .bg_card {
+        top: 0;
+    }
+
+    /* .question::view-transition {} */
+
+    .content {
+        width: 900px;
+        height: 650px;
+        margin: 0 auto;
+    }
+
+    .content img {
+        border-radius: 50px;
+    }
+
+    .play_button {
+        position: absolute;
+        top: 30%;
+        left: 43%;
+    }
+
+
+    .block {
+        display: none;
+    }
+
+
+    .android {
+        display: flex;
+        gap: 56px;
+    }
+
+    .delete {
+        display: none;
+    }
+
+
+
+    footer {
+        height: 1000px;
+    }
+
+    .footer_bottom_block {
+        display: flex;
+        gap: 130px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (min-width: 1000px) {
+
+    .burger_nav {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .menu {
+        display: none;
+    }
+
+    body {
+        width: 1000px;
+    }
+
+    .header_top_block {
+        display: flex;
+        /* align-items: center; */
+        flex-direction: column;
+    }
+
+
+    .question {
+        width: 1000px;
+        /* width:; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left_bg_card {
+        border-bottom-left-radius: 35px;
+        border-top-left-radius: 48px;
+        width: 704px;
+        height: 585px;
+        background-color: #6cd29ce7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -0;
+        left: 0;
+    }
+
+    .delete_card {
+        display: none;
+    }
+
+    .right_bg_card {
+        border-bottom-right-radius: 35px;
+        border-top-right-radius: 48px;
+        width: 23%;
+        height: 585px;
+        background-color: #e05959af;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0%;
+        left: 77%;
+    }
+
+    .question img {
+        width: 900px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    .content {
+        width: 900px;
+        height: 650px;
+        margin: 0 auto;
+    }
+
+    .content img {
+        border-radius: 50px;
+    }
+
+    .play_button {
+        position: absolute;
+        top: 30%;
+        left: 43%;
+    }
+
+
+    .block {
+        display: none;
+    }
+
+
+    .android {
+        display: flex;
+        gap: 56px;
+    }
+
+    .delete {
+        display: none;
+    }
+
+
+
+    footer {
+        height: 1000px;
+    }
+
+    .footer_bottom_block {
+        display: flex;
+        gap: 130px;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 993px) {
+
+    .burger_nav {
+        width: 900px;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .burger_menu {
+        display: none;
+    }
+
+
+
+}

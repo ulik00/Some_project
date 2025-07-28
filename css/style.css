@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* узнать на завтра для чего этот тег */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #F2F2F2;
+}
+
+.header_top_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 40px 0;
+}
+
+.header_top_block h1 {
+    color: rgb(0, 136, 162);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 52px;
+    font-weight: 400;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    /* line-height: 37px; */
+    list-style: none;
+    align-items: center;
+}
+
+.menu li {
+    flex: 0 1 20%;
+}
+
+#toggle {
+    opacity: 0;
+}
+
+/* Стилизация кнопки */
+.btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn span,
+.btn span::before,
+.btn span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    transition: .3s
+}
+
+.btn span::before {
+    content: '';
+    top: -8px;
+}
+
+.btn span::after {
+    content: '';
+    top: 8px;
+}
+
+
+.burger_menu {
+    position: fixed;
+    /* visibility: hidden; */
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    padding: 80px 0px;
+    list-style: none;
+    text-align: center;
+    background-color: aqua;
+    z-index: 9;
+    box-shadow: 5px 0 8px 1px rgba(0, 0, 0, 0.521);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: .3s;
+}
+
+.burger_menu__item {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #ffff;
+    transition: 3s;
+}
+
+.burger_menu__item:hover {
+    background-color: black;
+}
+
+#toggle:checked~.btn span {
+    transform: rotate(45deg);
+
+}
+
+#toggle:checked~.btn span::before {
+    transform: rotate(-90deg);
+    top: 0;
+
+}
+
+#toggle:checked~.btn span::after {
+    transform: rotate(0deg);
+    top: 0;
+}
+
+#toggle:checked~.burger_menu {
+    left: 0;
+    visibility: visible;
+}
+
+
+
+.menu__item {
+    background: #808080;
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans", sans-serif;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 27px;
+    padding: 10px 0;
+    font-weight: 400;
+    transition: .3s;
+    /* border: 2px solid black; */
+}
+
+.menu__item:hover {
+    background-color: rgb(0, 136, 162);
+}
+
+.question {
+    margin: 30px auto;
+    max-width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.question_card {
+    flex: 0 1 30%;
+    position: relative;
+    transition: .3s;
+}
+
+.question_card img {
+    width: 100%;
+}
+
+.bg_card {
+    position: relative;
+}
+
+.left_bg_card {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 73%;
+    height: 100%;
+    background-color: #6cd29ce7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+
+}
+
+p {
+    font-size: 20px;
+    color: #ffff;
+    font-family: "Open Sans", sans-serif;
+}
+
+.right_bg_card {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 27%;
+    height: 100%;
+    background-color: #e05959af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 73%;
+    z-index: 2;
+}
+
+.question_card p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
+    width: 80%;
+    font-family: "Open Sans", sans-serif;
+}
+
+.question_card:hover {
+    transform: scale(1.08);
+}
+
+.about {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.about h3 {
+    color: #0088A2;
+    display: flex;
+    justify-content: center;
+    font-size: 56px;
+    font-weight: 100;
+    font-family: "Open Sans", sans-serif;
+    margin: 30px 0;
+}
+
+.content {
+    position: relative;
+}
+
+.photo {
+    width: 100%;
+    height: 70%;
+}
+
+.play_button {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+    transition: .3s;
+}
+
+.play_button:hover {
+    transform: scale(1.30);
+}
+
+.block {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.block img {
+    width: 300px;
+    height: 500px;
+
+}
+
+.cube {
+    margin-top: 70px;
+    position: relative;
+    top: 0;
+    left: 8%;
+}
+
+#cube2 {
+    position: relative;
+    left: -3%;
+    top: 40px;
+}
+
+#cube3 {
+    position: relative;
+    left: -5%;
+    top: 0;
+}
+
+#cube4 {
+    position: relative;
+    left: -7%;
+    top: 40px;
+}
+
+#cube5 {
+    position: relative;
+    left: -9%;
+    top: 0;
+}
+
+.about_project {
+    margin: 20px auto;
+    width: 60%;
+}
+
+.about_project h3 {
+    color: rgb(0, 136, 162);
+    display: flex;
+    justify-content: center;
+    font-size: 67px;
+    font-weight: 200;
+    font-family: "Open Sans", sans-serif;
+    margin: 30px 0
+}
+
+.about_project p {
+    color: rgb(112, 112, 112);
+    font-family: "Roboto", sans-serif;
+    font-size: 34px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.download p {
+    margin-top: 50px;
+    color: rgb(112, 112, 112);
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.download {
+    width: 70%;
+    margin: 60px auto;
+}
+
+.download h5 {
+    color: rgb(0, 136, 162);
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    font-weight: 200;
+    font-family: "Open Sans", sans-serif;
+    margin: 30px 0;
+}
+
+.download img {
+    width: 350px;
+    height: 250px;
+    margin: 60px auto;
+}
+
+.android {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    width: 100%;
+    height: 600px;
+    background: rgb(0, 136, 162);
+}
+
+.footer_bottom_block img {
+    width: 70px;
+    height: 70px;
+}
+
+footer h3 {
+    padding: 6% 0 3%;
+    color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 82px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_bottom_block {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.mail h5 {
+    font-size: 40px;
+    font-weight: 200;
+    font-family: "Open Sans", sans-serif;
+    padding: 40px 0;
+}
+
+.mail p {
+    font-size: 20px;
+}
+
+.mail {
+    width: 300px;
+    color: rgb(253, 253, 253);
+    font-size: 70px;
+    font-family: "Open Sans", sans-serif;
+    padding-top: 20px;
+}
